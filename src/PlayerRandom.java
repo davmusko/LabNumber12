@@ -1,7 +1,8 @@
 import java.util.Random;
 
 public class PlayerRandom extends Player {
-	private Random random;
+	
+	private Random random = new Random();
 
 	public PlayerRandom() {
 		super();
@@ -17,8 +18,10 @@ public class PlayerRandom extends Player {
 			return State.ROCK;
 		case 1:
 			return State.PAPER;
-		default:
+		case 2:
 			return State.SCISSORS;
+		default:
+			return State.ROCK;
 		
 		}
 	}
